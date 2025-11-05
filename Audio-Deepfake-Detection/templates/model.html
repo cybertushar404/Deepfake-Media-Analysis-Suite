@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<title>Audio Deepfake Detection</title>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/styles.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Upload an audio file:</h2>
+        <form id="upload_form" action="/" method="POST" enctype="multipart/form-data">
+            <input type="file" name="audio_file" id="audio_file" required>
+            <br><br>
+            <div id="loader" class="loader">
+                <img src="/static/loader.gif" alt="Loading...">
+            </div>
+            <div class="audio-player" id="audio_player_container">
+                <audio controls id="audio_player">
+                    <source id="audio_source" src="#" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <input type="submit" id="submit_btn" value="Submit">
+        </form>
+
+
+        {% if file_label %}
+        <div class="result">
+            <p class="file-label">{{ file_label }}</p>
+            {% if result_label %}
+            {% set result_parts = result_label.split(':') %}
+            <p>
+                <span>{{ result_parts[0] }}:</span>
+                {% if "Fake" in result_parts[1] %}
+                <span class="fake-result">{{ result_parts[1] }}</span>
+                {% else %}
+                <span class="real-result">{{ result_parts[1] }}</span>
+                {% endif %}
+            </p>
+            {% endif %}
+        </div>
+        {% endif %}
+    </div>
+
+    <script>
+        const audioFileInput = document.getElementById('audio_file');
+        const audioPlayer = document.getElementById('audio_player');
+        const audioPlayerContainer = document.getElementById('audio_player_container');
+        const audioSource = document.getElementById('audio_source');
+        const uploadForm = document.getElementById('upload_form');
+        const loader = document.getElementById('loader');
+
+        audioFileInput.addEventListener('change', function (event) {
+            const file = event.target.files[0];
+            if (file) {
+                const fileURL = URL.createObjectURL(file);
+                audioSource.src = fileURL;
+                audioPlayer.load();
+                audioPlayerContainer.style.display = 'block';
+            }
+        });
+
+        uploadForm.addEventListener('submit', function () {
+            loader.style.display = 'block';
+        });
+    </script>
+</body>
+
+</html>
