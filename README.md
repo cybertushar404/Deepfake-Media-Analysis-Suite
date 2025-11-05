@@ -76,13 +76,23 @@ The Deepfake & Media Analysis Suite is an all-in-one solution that combines four
 # Quick Start
 1. Clone Repository
 ```
-git clone https://github.com/yourusername/deepfake-media-analysis-suite.git
+git clone https://github.com/cybertushar404/Deepfake-Media-Analysis-Suite.git
 cd deepfake-media-analysis-suite
 ```
 
-2. Install All Dependencies
+2. Python Environment Setup
 ```
-pip install -r requirements-combined.txt
+# Create virtual environment
+python3 -m venv ~/deepfake-env
+
+# Activate virtual environment
+source ~/deepfake-env/bin/activate
+
+# Upgrade pip
+pip install --upgrade pip
+
+# Install Python dependencies
+pip install -r requirements.txt
 ```
 
 # Access Tools
