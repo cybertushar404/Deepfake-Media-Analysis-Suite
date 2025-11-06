@@ -109,6 +109,11 @@ pip install -r requirements.txt
 - Accuracy: High precision on trained datasets
 
 Port: 5000
+# results
+<img width="1552" height="586" alt="Screenshot 2025-11-06 120338" src="https://github.com/user-attachments/assets/e55dad09-8859-4ba9-86df-b3f1029e62ec" />
+
+<img width="1420" height="466" alt="Screenshot 2025-11-06 121036" src="https://github.com/user-attachments/assets/37994251-b861-41db-b7a3-af4b34757c8a" />
+
 
 2. 🎥 Video Deepfake Detection
 - Purpose: Identify manipulated video content using facial landmark analysis
@@ -117,6 +122,9 @@ Port: 5000
 - Accuracy: 90%+ on clear frontal faces
 
 Port: 5001
+# results
+<img width="1683" height="758" alt="Screenshot 2025-11-06 120117" src="https://github.com/user-attachments/assets/2cb3cf4f-7427-47ab-94ac-2ba4b81fc123" />
+
 
 3. 🏢 Logo Detection & Identification
 - Purpose: Recognize and identify brand logos in images
@@ -125,6 +133,9 @@ Port: 5001
 - Real-time: Yes with GPU acceleration
 
 Port: 7860
+# results
+<img width="1785" height="822" alt="Screenshot 2025-11-05 140428" src="https://github.com/user-attachments/assets/52651f15-127b-4faf-854c-f841241ca56f" />
+
 
 4. 📧 Phishing Email Detection
 - Purpose: Detect malicious emails using ML classification
@@ -133,6 +144,11 @@ Port: 7860
 - Real-time: REST API with JSON responses
 
 Port: 5002
+# results
+<img width="1891" height="849" alt="Screenshot 2025-11-05 121226" src="https://github.com/user-attachments/assets/d5f29695-230f-4e3b-b126-cd2e53bbf6e8" />
+
+<img width="1904" height="845" alt="Screenshot 2025-11-05 121035" src="https://github.com/user-attachments/assets/892f27f9-d857-4215-b155-e3e2c9a56fdb" />
+
 
 ## 📊 Performance Metrics
 
